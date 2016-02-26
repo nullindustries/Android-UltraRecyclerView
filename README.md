@@ -25,7 +25,7 @@ To publish:
 
 ```
 dependencies {
-    compile 'co.nullindustries:ultrarecyclerview:1.1.4'
+    compile 'co.nullindustries:ultrarecyclerview:1.1.5'
 }
 ```
 

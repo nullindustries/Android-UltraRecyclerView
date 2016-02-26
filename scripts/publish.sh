@@ -3,4 +3,4 @@
 # Assemble and publish
 #
 
-sh gradlew clean build UltraRecyclerView:uploadArchives --daemon
+sh gradlew clean build generateRelease --daemon

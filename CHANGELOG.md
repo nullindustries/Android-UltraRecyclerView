@@ -1,6 +1,10 @@
 CHANGELOG
 ============
 
+## 1.1.5
+
+= Support libraries 23.2.0, build gradle 2.0.0-beta6.
+
 ## 1.1.3
 
 = SDK to 23.0.0 and support libraries to 23.

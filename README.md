@@ -25,7 +25,7 @@ To publish:
 
 ```
 dependencies {
-    compile 'co.nullindustries:ultrarecyclerview:1.1.3'
+    compile 'co.nullindustries:ultrarecyclerview:1.1.4'
 }
 ```
 
@@ -169,6 +169,8 @@ Custom attributes supported:
 
 Commit comments are composed by: `type` `<empty_space>` `message`.
 
+<<<<<<< HEAD
+=======
 Old-Types (DEPRECATED):
 * :muscle: : UPDATE
 * :neckbeard: : ADD 
@@ -176,12 +178,15 @@ Old-Types (DEPRECATED):
 * :clap:: : FIX
 * :umbrella: : CLEAN
 
+>>>>>>> 0f1ee197c8f061639c89c3937aad2eecaab97d96
 Types:
 * = : UPDATE
 * + : ADD
 * - : REMOVE
 * F : FIX
 * C : CLEAN
+<<<<<<< HEAD
+=======
 
 Example:
 
@@ -190,6 +195,7 @@ Example:
 `:clap: showing dialogs crash`: means that you fixed something
 `:clap: showing dialogs crash`: means that you fixed something
 `:clap: showing dialogs crash`: means that you fixed something
+>>>>>>> 0f1ee197c8f061639c89c3937aad2eecaab97d96
 
 
 ####[Sample java][sample java]

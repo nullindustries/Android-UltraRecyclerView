@@ -166,21 +166,16 @@ Custom attributes supported:
 ```
 
 ##Thanks
-[Malinskiy](https://github.com/Malinskiy/UltraRecyclerView) for the base version of this library.
-
-[Jake Warthon][jake-swipe-to-dismiss] for implementation of SwipeToDismiss via NineOldAndroids.
-
-[Eowise][eowise-sticky-headers] for implementation of sticky headers.
-
-[Quentin Dommerc][superlistview] for inspiration.
-
-[代码家][swipelayout] for swipe layout implementation.
-
-[hteSquid][theSquid.ink] icon :).
+- [Malinskiy](https://github.com/Malinskiy/UltraRecyclerView) for the base version of this library.
+- [Jake Warthon][jake-swipe-to-dismiss] for implementation of SwipeToDismiss via NineOldAndroids.
+- [Eowise][eowise-sticky-headers] for implementation of sticky headers.
+- [Quentin Dommerc][superlistview] for inspiration.
+- [代码家][swipelayout] for swipe layout implementation.
+- [hteSquid][theSquid.ink] icon :).
 
 ##License
 
-    Copyright (c) 2015 Null Industries
+    Copyright (c) 2015 Barista Ventures
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

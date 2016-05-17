@@ -4,26 +4,25 @@ import java.util.List;
 
 public interface SwipeItemManagerInterface {
 
-    public void openItem(int position);
+  public void openItem(int position);
 
-    public void closeItem(int position);
+  public void closeItem(int position);
 
-    public void closeAllExcept(SwipeLayout layout);
+  public void closeAllExcept(SwipeLayout layout);
 
-    public List<Integer> getOpenItems();
+  public List<Integer> getOpenItems();
 
-    public List<SwipeLayout> getOpenLayouts();
+  public List<SwipeLayout> getOpenLayouts();
 
-    public void removeShownLayouts(SwipeLayout layout);
+  public void removeShownLayouts(SwipeLayout layout);
 
-    public boolean isOpen(int position);
+  public boolean isOpen(int position);
 
-    public Mode getMode();
+  public Mode getMode();
 
-    public void setMode(Mode mode);
+  public void setMode(Mode mode);
 
-
-    public static enum Mode {
-        Single, Multiple
-    }
+  public static enum Mode {
+    Single, Multiple
+  }
 }

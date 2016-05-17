@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 
-def libVersionName = "2.0.0-SNAPSHOT"
+def libVersionName = "2.0.0"
 
 android {
   compileSdkVersion setup.compileSdk

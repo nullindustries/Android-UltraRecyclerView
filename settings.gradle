@@ -1,1 +1,1 @@
-include ':UltraRecyclerView', ':UltraRecyclerView-sample'
+include ':lib', ':sample'

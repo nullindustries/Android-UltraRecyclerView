@@ -1,12 +1,14 @@
 buildscript {
-  ext.deps = [androidSupport: "23.2.0"]
-  ext.setup = [buildTools: "23.0.2"]
+  ext.deps = [androidSupport: "23.4.0"]
+  ext.setup = [buildTools: "23.0.3",
+               minSdk    : 9,
+               compileSdk: 23]
 
   repositories {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.0.0-beta6'
+    classpath 'com.android.tools.build:gradle:2.1.0'
   }
 }
 

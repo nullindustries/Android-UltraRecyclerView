@@ -4,34 +4,32 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
-
 public class ListActivity extends BaseActivity implements View.OnClickListener {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-        findViewById(R.id.button).setOnClickListener(this);
-    }
+    findViewById(R.id.button).setOnClickListener(this);
+  }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_vertical_sample;
-    }
+  @Override
+  protected int getLayoutId() {
+    return R.layout.activity_vertical_sample;
+  }
 
-    @Override
-    protected boolean isSwipeToDismissEnabled() {
-        return true;
-    }
+  @Override
+  protected boolean isSwipeToDismissEnabled() {
+    return true;
+  }
 
-    @Override
-    protected LinearLayoutManager getLayoutManager() {
-        return new LinearLayoutManager(this);
-    }
+  @Override
+  protected LinearLayoutManager getLayoutManager() {
+    return new LinearLayoutManager(this);
+  }
 
-    @Override
-    public void onClick(View v) {
-        startAddingItems();
-    }
-
+  @Override
+  public void onClick(View v) {
+    startAddingItems();
+  }
 }

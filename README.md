@@ -25,7 +25,7 @@ To publish:
 
 ```
 dependencies {
-    compile 'co.nullindustries:ultrarecyclerview:1.1.4'
+    compile 'com.barista_v:ultrarecyclerview:<version>'
 }
 ```
 
@@ -34,7 +34,7 @@ dependencies {
 -	Use directly UltraRecyclerView:
 
 ```xml
-   <co.nullindustries.ultrarecyclerview.UltraRecyclerView
+   <com.barista_v.ultrarecyclerview.UltraRecyclerView
             android:id="@+id/list"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
@@ -103,7 +103,7 @@ You have to use appropriate `mainLayoutId` attribute to have scrollbars visible.
 
 ### Vertical scrollbars
 ```xml
-<co.nullindustries.ultrarecyclerview.UltraRecyclerView
+<com.barista_v.ultrarecyclerview.UltraRecyclerView
      app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
      app:scrollbarStyle="insideInset"
      .../>
@@ -111,7 +111,7 @@ You have to use appropriate `mainLayoutId` attribute to have scrollbars visible.
 
 ### Horizontal scrollbars
 ```xml
-<co.nullindustries.ultrarecyclerview.UltraRecyclerView
+<com.barista_v.ultrarecyclerview.UltraRecyclerView
      app:mainLayoutId="@layout/layout_recyclerview_horizontalscroll"
      app:scrollbarStyle="insideInset"
      .../>
@@ -131,7 +131,7 @@ You have to use appropriate `mainLayoutId` attribute to have scrollbars visible.
 Item example:
 
 ```xml
-<co.nullindustries.ultrarecyclerview.swipe.SwipeLayout
+<com.barista_v.ultrarecyclerview.swipe.SwipeLayout
     android:id="@id/recyclerview_swipe"
     xmlns:swipe="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -146,7 +146,7 @@ Item example:
         ...
     </LinearLayout>
 
-</co.nullindustries.ultrarecyclerview.swipe.SwipeLayout>
+</com.barista_v.ultrarecyclerview.swipe.SwipeLayout>
 ```
 
 Custom attributes supported:
@@ -164,41 +164,6 @@ Custom attributes supported:
         <enum name="pull_out" value="1"/>
     </attr>
 ```
-
-# Commit Format
-
-Commit comments are composed by: `type` `<empty_space>` `message`.
-
-<<<<<<< HEAD
-=======
-Old-Types (DEPRECATED):
-* :muscle: : UPDATE
-* :neckbeard: : ADD 
-* :shipit: : REMOVE
-* :clap:: : FIX
-* :umbrella: : CLEAN
-
->>>>>>> 0f1ee197c8f061639c89c3937aad2eecaab97d96
-Types:
-* = : UPDATE
-* + : ADD
-* - : REMOVE
-* F : FIX
-* C : CLEAN
-<<<<<<< HEAD
-=======
-
-Example:
-
-`:muscle: change the dialogs style`: means there was an update over the dialogs style
-`:neckbeard: new dialogs library`: means you added something
-`:clap: showing dialogs crash`: means that you fixed something
-`:clap: showing dialogs crash`: means that you fixed something
-`:clap: showing dialogs crash`: means that you fixed something
->>>>>>> 0f1ee197c8f061639c89c3937aad2eecaab97d96
-
-
-####[Sample java][sample java]
 
 ##Thanks
 [Malinskiy](https://github.com/Malinskiy/UltraRecyclerView) for the base version of this library.

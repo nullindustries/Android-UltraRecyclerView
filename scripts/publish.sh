@@ -3,4 +3,4 @@
 # Assemble and publish
 #
 
-sh gradlew clean build generateRelease --daemon
+sh gradlew clean build lib:uploadArchives --daemon

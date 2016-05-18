@@ -166,9 +166,9 @@ public class UltraRecyclerView extends FrameLayout {
             case STAGGERED_GRID:
               StaggeredGridLayoutManager staggeredGridLayoutManager =
                   (StaggeredGridLayoutManager) layoutManager;
-                if (lastPositions == null) {
-                    lastPositions = new int[staggeredGridLayoutManager.getSpanCount()];
-                }
+              if (lastPositions == null) {
+                lastPositions = new int[staggeredGridLayoutManager.getSpanCount()];
+              }
 
               staggeredGridLayoutManager.findLastVisibleItemPositions(lastPositions);
               lastVisibleItemPosition = findMax(lastPositions);
@@ -187,23 +187,23 @@ public class UltraRecyclerView extends FrameLayout {
             }
           }
 
-            if (mExternalOnScrollListener != null) {
-                mExternalOnScrollListener.onScrolled(recyclerView, dx, dy);
-            }
-            if (mSwipeDismissScrollListener != null) {
-                mSwipeDismissScrollListener.onScrolled(recyclerView, dx, dy);
-            }
+          if (mExternalOnScrollListener != null) {
+            mExternalOnScrollListener.onScrolled(recyclerView, dx, dy);
+          }
+          if (mSwipeDismissScrollListener != null) {
+            mSwipeDismissScrollListener.onScrolled(recyclerView, dx, dy);
+          }
         }
 
         @Override
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
           super.onScrollStateChanged(recyclerView, newState);
-            if (mExternalOnScrollListener != null) {
-                mExternalOnScrollListener.onScrollStateChanged(recyclerView, newState);
-            }
-            if (mSwipeDismissScrollListener != null) {
-                mSwipeDismissScrollListener.onScrollStateChanged(recyclerView, newState);
-            }
+          if (mExternalOnScrollListener != null) {
+            mExternalOnScrollListener.onScrollStateChanged(recyclerView, newState);
+          }
+          if (mSwipeDismissScrollListener != null) {
+            mSwipeDismissScrollListener.onScrollStateChanged(recyclerView, newState);
+          }
         }
       };
       mRecyclerView.setOnScrollListener(mInternalOnScrollListener);
@@ -473,7 +473,7 @@ public class UltraRecyclerView extends FrameLayout {
   private int findMax(int[] values) {
     int max = Integer.MIN_VALUE;
     for (int value : values) {
-        if (value > max) { max = value; }
+      if (value > max) { max = value; }
     }
     return max;
   }

@@ -24,6 +24,8 @@ public class UltraRecyclerView extends FrameLayout {
     STAGGERED_GRID
   }
 
+  //<editor-fold desc="Attributes">
+
   protected RecyclerView mRecyclerView;
   protected ViewStub mProgressViewStub;
   protected ViewStub mMoreProgressViewStub;
@@ -54,6 +56,8 @@ public class UltraRecyclerView extends FrameLayout {
   private RecyclerView.AdapterDataObserver mAdapterDataObserver;
   protected OnMoreListener mOnMoreListener;
   protected SwipeRefreshLayout mSwipeRefreshLayout;
+
+  //</editor-fold>
 
   //<editor-fold desc="Initializers">
 
@@ -103,14 +107,16 @@ public class UltraRecyclerView extends FrameLayout {
       return;
     }
     View layout = LayoutInflater.from(getContext()).inflate(mSuperRecyclerViewMainLayout, this);
-    mSwipeRefreshLayout = (SwipeRefreshLayout) layout.findViewById(R.id.ptr_layout);
+    mSwipeRefreshLayout = (SwipeRefreshLayout) layout.findViewById(
+        R.id.ptr_layout);
     mSwipeRefreshLayout.setEnabled(false);
 
     mProgressViewStub = (ViewStub) layout.findViewById(android.R.id.progress);
     mProgressViewStub.setLayoutResource(mProgressId);
     mProgressView = mProgressViewStub.inflate();
 
-    mMoreProgressViewStub = (ViewStub) layout.findViewById(R.id.more_progress);
+    mMoreProgressViewStub = (ViewStub) layout.findViewById(
+        R.id.more_progress);
     mMoreProgressViewStub.setLayoutResource(mMoreProgressId);
     if (mMoreProgressId != 0) mMoreProgressView = mMoreProgressViewStub.inflate();
     mMoreProgressViewStub.setVisibility(View.GONE);
@@ -160,9 +166,9 @@ public class UltraRecyclerView extends FrameLayout {
             case STAGGERED_GRID:
               StaggeredGridLayoutManager staggeredGridLayoutManager =
                   (StaggeredGridLayoutManager) layoutManager;
-              if (lastPositions == null) {
-                lastPositions = new int[staggeredGridLayoutManager.getSpanCount()];
-              }
+                if (lastPositions == null) {
+                    lastPositions = new int[staggeredGridLayoutManager.getSpanCount()];
+                }
 
               staggeredGridLayoutManager.findLastVisibleItemPositions(lastPositions);
               lastVisibleItemPosition = findMax(lastPositions);
@@ -181,22 +187,30 @@ public class UltraRecyclerView extends FrameLayout {
             }
           }
 
-          if (mExternalOnScrollListener != null) {
-            mExternalOnScrollListener.onScrolled(recyclerView, dx, dy);
-          }
-          if (mSwipeDismissScrollListener != null) {
-            mSwipeDismissScrollListener.onScrolled(recyclerView, dx, dy);
-          }
+            if (mExternalOnScrollListener != null) {
+                mExternalOnScrollListener.onScrolled(recyclerView, dx, dy);
+            }
+            if (mSwipeDismissScrollListener != null) {
+                mSwipeDismissScrollListener.onScrolled(recyclerView, dx, dy);
+            }
         }
 
         @Override
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
           super.onScrollStateChanged(recyclerView, newState);
+            if (mExternalOnScrollListener != null) {
+                mExternalOnScrollListener.onScrollStateChanged(recyclerView, newState);
+            }
+            if (mSwipeDismissScrollListener != null) {
+                mSwipeDismissScrollListener.onScrollStateChanged(recyclerView, newState);
+            }
+          }
+
           if (mExternalOnScrollListener != null) {
-            mExternalOnScrollListener.onScrollStateChanged(recyclerView, newState);
+            mExternalOnScrollListener.onScrolled(recyclerView, dx, dy);
           }
           if (mSwipeDismissScrollListener != null) {
-            mSwipeDismissScrollListener.onScrollStateChanged(recyclerView, newState);
+            mSwipeDismissScrollListener.onScrolled(recyclerView, dx, dy);
           }
         }
       };
@@ -467,7 +481,7 @@ public class UltraRecyclerView extends FrameLayout {
   private int findMax(int[] values) {
     int max = Integer.MIN_VALUE;
     for (int value : values) {
-      if (value > max) { max = value; }
+        if (value > max) { max = value; }
     }
     return max;
   }

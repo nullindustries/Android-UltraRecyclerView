@@ -1,6 +1,11 @@
 ![](/img/logo_with_name.png)
 [ ![Download](https://api.bintray.com/packages/danielnull/maven/UltraRecyclerView/images/download.svg) ](https://bintray.com/danielnull/maven/UltraRecyclerView/_latestVersion)
 
+# DEPRECATED
+
+The main idea was to avoid empty/error/items view code duplication among views but will cut a lot of things from your control.
+In practice is not a good idea.
+
 ## Description
 
 This is an attempt to make RecyclerView easier to use.
